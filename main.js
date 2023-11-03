@@ -17,7 +17,7 @@ function triesCounter(){
 
 function lowerOrHigher() {
     triesCounter();
-    if(tring == true){
+    if(tring == true && !isNaN(parseInt(try1.value,10)) ){
     if(try1.value > target){
         document.getElementById('tex').innerHTML =`The number is <b>LOWER</b> than this <br> You still have ${10 - tries} tries `
     } else if(try1.value < target){
@@ -26,5 +26,7 @@ function lowerOrHigher() {
         document.getElementById('tex').innerHTML =`<b>Congratulations</b> you got the number in ${tries} tries `  
         tring = false;
     }
-}
+    }else{
+        document.getElementById('tex').innerHTML =`You must write a <b>NUMBER</b>  <br> You still have ${10 - tries} tries`
+    }
 }
